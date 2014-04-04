@@ -1,0 +1,15 @@
+html, body, div {
+	margin:0;
+	padding:0;
+	border:none;
+}
+
+div {
+	padding-right: 3%;
+	background-color: black;
+	border: 2px solid red;
+	border-radius: 150px;
+	-o-border-radius: 150px;
+	-moz-border-radius: 150px;
+	-webkit-border-radius: 150px;
+}

@@ -1,0 +1,18 @@
+table {border-collapse:collapse;font:0.7em Verdana, Geneva, sans-serif;text-align:left;}
+th {font-weight:normal;}
+table, tr, th, td {border:1px solid #ccc;padding:5px;}
+#productId {width:20%;}
+.mWidth {width:40%;}
+#quantity {width:60%;}
+button.filter {width:21px;height:21px;position:relative;top:3px;left:2px;background:#eee url(filter.png) 2px 2px no-repeat;border-radius:3px;-webkit-border-radius:3px;-o-border-radius:3px;-moz-border-radius:3px;border:1px solid #aaa;}
+th, tfoot tr td {background: #DFE3E8;border:1px solid #aaa;}
+#headings th, tfoot tr td {background: linear-gradient(#F1F1F1, #DFE3E8);background: -webkit-linear-gradient(#F1F1F1, #DFE3E8);}
+#itemsInPage {float:right;margin:5px;}
+#first {background:#eee url(buttons.png) -42px 21px;}
+#prev {background:#eee url(buttons.png) -2px 21px;}
+#next {background:#eee url(buttons.png) -21px 21px;}
+#last {background:#eee url(buttons.png) -65px 21px;}
+.button {width:21px;height:21px;border:1px solid #aaa;border-radius:3px;-webkit-border-radius:3px;-o-border-radius:3px;-moz-border-radius:3px;margin-top:2px;}
+a, #cont {display:block;padding:2px;margin-top:4px;color:black;text-decoration:none;}
+a#current {border:1px solid #f60;border-radius:3px;-webkit-border-radius:3px;-o-border-radius:3px;-moz-border-radius:3px;}
+#first, #prev, a, #cont, #next, #last {float:left;margin-right:5px;}

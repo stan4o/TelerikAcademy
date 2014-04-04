@@ -1,0 +1,300 @@
+/* VARIABLES */
+
+@bg-color: #9215f2; 					 	/* Background Color */
+@f-color: #fff; 						 	/* Default Font Color */
+@f-size: 14px; 							 	/* Default Font Size */
+@f-family: Arial; 							/* Default Font Family */
+@f-style: normal;							/* Default Font Style */
+
+/* MIXINS */
+
+.cfix {
+	zoom:1;
+	&:after {
+		content: "";
+		display: block;
+		height: 0;
+		clear: both;
+	}
+}
+
+.l-gradient (@f-pos, @f-color, @t-pos, @t-color) {
+	background: @f-color;
+	background: -moz-linear-gradient(@f-pos,  @f-color 0%, @t-color 100%);
+	background: -webkit-gradient(linear, left @f-pos, left @t-pos, color-stop(0%, @f-color), color-stop(100%, @t-color));
+	background: -webkit-linear-gradient(@f-pos,  @f-color 0%,@t-color 100%);
+	background: -o-linear-gradient(@f-pos,  @f-color 0%,@t-color 100%);
+	background: -ms-linear-gradient(@f-pos,  @f-color 0%,@t-color 100%);
+	background: linear-gradient(to @t-pos,  @f-color 0%,@t-color 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=~"'@{f-color}'", endColorstr=~"'@{t-color}'", GradientType=0 );
+}
+
+.brd-rad (@radius) {
+	border-radius: @radius;
+	-o-border-radius: @radius;
+	-moz-border-radius: @radius;
+	-webkit-border-radius: @radius;
+}
+
+.font(@size, @weight) {
+    font-size: @size;
+    font-weight: @weight;
+}
+
+/* CSS RESET */
+
+html, body, header, section, article, aside,
+footer, nav, h1, h2, div, ul, li, form, label,
+input, button, img, a, p, time {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+header, section, article, nav, aside, footer {
+	display: block;
+}
+
+ul {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+/* MAIN STYLE */
+
+body {
+	font:@f-size @f-style @f-family;
+	color: @f-color;
+	background: @bg-color;
+
+	&>header {
+		padding: 25px 15px 5px;
+		.l-gradient(top, #d492fe, bottom, #9215f2);
+
+		div#header-container {
+			.cfix;
+
+			div#logo-container {
+				float: left;
+				position: relative;
+			}
+
+			div#reg-form-container {
+				float: right;
+				position: relative;
+				top: 50%;
+      			right: 5%;
+
+				div {
+					text-align: right;
+
+					label{
+						width: 50px;
+						margin: 5px;
+					}
+
+					input {
+						width: 130px;
+	                    background: #b35ef3;
+	                    border: 1px solid #603382;
+	                    .brd-rad(10px);
+	                    padding: 2px 5px;
+	                    margin: 5px;
+					}
+				}
+
+				button {
+					margin: 0 auto;
+	                padding: 5px 8px;
+	                font-weight: bold;
+	                background: #b35ef3;
+	                color: #fff;
+	                border: 1px solid #603382;
+	                border-style: outset;
+	                .brd-rad(10px);
+
+	                &:hover {
+	                	background-color: #8949b9;
+                    	border-style: inset;
+	                }
+				}
+			}
+		}
+
+		nav {
+            display: inline-block;
+            width: 75%;
+            margin: 20px;
+            padding: 12px;
+            border: 1px solid #000;
+            .brd-rad(10px);
+
+            ul {
+            	li {
+            		float: left;
+                	margin: 0;
+            		a {
+            			text-decoration: none;
+	                    padding: 0 10px 0;
+	                    color: white;
+	                    font-size: 1.4em;
+	                    &.selected {
+	                    	font-weight: bold;
+	                    }
+            		}
+            		&:hover {
+            			&>a {
+            				text-decoration: underline;
+                    		color: #a8a8a8;
+
+                    		&+ul {
+                    			display: block;
+                    		}
+            			}
+            		}
+
+            		ul.sub-nav-list {
+            			position: absolute;
+	                    display: none;
+	                    background-color: rgba(179, 94, 243, 0.9);
+	                   .brd-rad(5px);
+
+	                    li {
+	                    	display: block;
+	                    }
+            		}
+
+            		ul {
+                		li {
+                			float: none;
+		                    margin: 0 15px;
+		                    padding: 10px 0;
+		                    border-bottom: 1px solid #000;
+
+		                    &:last-of-type {
+		                    	border-bottom: none;
+		                    }
+
+		                    &>a {
+		                    	font-size: 1.2em;
+                        		color: #fff;
+		                    }
+                		}
+                	}
+            	}
+            }
+		}
+	}
+
+	section {
+		width: 75%;
+        float: left;
+        color: #000;
+
+        article  {
+        	margin: 20px;
+            padding: 20px;
+            border: 1px solid #000;
+            .brd-rad(10px);
+            color: #fff;
+
+            header {
+            	background: none;
+                padding: 5px;
+
+                h1 {
+                	font-size: 1.4em;
+                    padding: 0;
+                }
+            }
+
+            footer {
+            	padding: 5px;
+
+            	p {
+            		.font(16px, normal);
+                    text-align: right;
+
+                    time {
+                    	font-family: Consolas, 'Lucida Console', 'DejaVu Sans Mono', monospace;
+                    }
+
+                    a {
+                    	text-decoration: none;
+                        color: #d4a3f8;
+
+                        &:hover {
+                        	text-decoration: underline;
+                        }
+                    }
+            	}
+            }
+        }
+	}
+
+	aside {
+		float: left;
+        width: 20%;
+        margin: 20px;
+
+        &>ul {
+        	&>li {
+        		margin: 15px 0;
+                padding: 15px;
+                border: 1px solid #000;
+                .brd-rad(5px);
+
+                h2 {
+                	.font(1.1em, bold);
+                }
+
+                p {
+                	margin: 10px 5px;
+                    font-size: 14px;
+
+                    a {
+                    	color: #aaa;
+                        text-decoration: none;
+                    }
+
+                    strong, em {
+                    	color: #ccc;
+                        font: bold normal;
+                    }
+
+                    em {
+                        font-style: italic;
+                    }
+                }
+
+                ul {
+                    margin: 10px 0;
+
+                    li {
+                    	margin: 5px 0 0 10px;
+                        padding-left: 25px;
+                        background: url(images/li-dot.png) 0 50% no-repeat;
+                        
+                    }
+                }
+        	}
+        }
+	}
+
+	footer {
+		clear: both;
+        padding: 15px 0 25px 0;
+        text-align: center;
+
+        p {
+        	.font(1.2em, bold);
+        }
+	}
+}

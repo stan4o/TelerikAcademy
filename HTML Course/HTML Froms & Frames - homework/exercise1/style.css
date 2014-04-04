@@ -1,0 +1,89 @@
+table {
+	border-collapse: collapse;
+}
+
+table, tr, td {
+	border: 1px solid #444;
+}
+
+td {
+	padding: 5px;
+}
+
+#nested td:last-child {
+	padding: 0;
+}
+
+#nested td input {
+	margin: 5px;
+}
+
+#nested table, #nested table tr, #nested table tr td {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+#nested table tr td {
+	padding: 0 5px;
+	border-left: 1px solid #444;
+	text-align: center;
+}
+
+tr td:first-child {
+	width: 100px;
+	text-align:right;
+	font-weight: bold;
+}
+
+input[type="text"] {
+	width: 250px;
+}
+
+textarea {
+	max-width: 250px;
+	max-height: 100px;
+}
+
+input#zip-post {
+	width: 50px;
+}
+
+input#city, table#nested {
+	float: left;
+}
+
+table#nested tr td:first-child {
+	width: 50%;
+}
+
+input#city, input#state {
+	width: 90px;
+}
+
+input#month, input#day, input#year {
+	width: 20px;
+	margin-right: 5px;
+}
+
+input#year {
+	width: 30px;
+}
+
+input.phone {
+	width: 30px;
+	margin-right: 10px;
+}
+
+input.phone:last-child {
+	width: 50px;
+}
+
+#buttons {
+	width: 180px;
+	margin:0 auto;
+}
+
+tr#last {
+	background: lightblue;
+}

@@ -1,0 +1,71 @@
+html, body, table, tbody, tfoot, thead, tr, th, td, 
+article, aside, footer, header, nav, section, 
+h1, h2, h3, h4, h5, h6, p, a, input {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 50px;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+table {
+	border-spacing: 0;
+	text-align: left;
+}
+
+table thead tr th {
+	padding: 9px;
+	color: #fff;
+	background: #52B506;
+	border-left: 2px solid #2A7A05;
+	border-bottom: 2px solid #2A7A05;
+	border-top: none;
+	border-right: 2px solid #67bf1B !important;
+}
+
+th:last-child {
+	border-right: none !important;
+}
+
+th:first-child {
+	border-left: none !important;
+}
+
+td {
+	border-left:1px solid black;
+	padding: 10px;
+}
+
+td:first-child {
+	border: none;
+}
+
+tr:nth-of-type(even) {
+	background: #eee;
+}
+
+img {
+	position: relative;
+	margin-right: 10px;
+	top: 5px;
+}
+
+table tr td input[type="checkbox"] {
+	border: 1px inset black;
+	background: #ccc;
+}

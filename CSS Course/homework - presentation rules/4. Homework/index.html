@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Homework 4</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <section id="calculator">
+
+            <!-- Main menu for the calculator -->
+
+            <ul class="calc-menu">
+                <li class="calc-menu-item">View</li>
+                <li class="calc-menu-item">Edit</li>
+                <li class="calc-menu-item">Help</li>
+            </ul>
+
+            <!-- The input field for the calculator -->
+
+            <form action="#" id="calc-input-field" class="box">
+                <input type="text" value="8854455">
+            </form>
+
+            <!-- Binary data -->
+
+            <div class="binary-data box">
+
+                <ul class="data-row">
+                    <li>0000</li>
+                    <li>0000</li>
+                    <li>0000</li>
+                    <li>0000</li>
+                    <li>0000</li>
+                    <li>0000</li>
+                    <li>0000</li>
+                    <li>0000</li>
+                </ul>
+
+                <ul class="span-row">
+                    <li><span>63</span></li>
+                    <li><span>47</span></li>
+                    <li><span>32</span></li>
+                </ul>
+
+                <ul class="data-row">
+                    <li>0000</li>
+                    <li>0000</li>
+                    <li>1000</li>
+                    <li>0111</li>
+                    <li>0001</li>
+                    <li>1011</li>
+                    <li>1011</li>
+                    <li>0111</li>
+                </ul>
+
+                <ul class="span-row">
+                    <li><span>31</span></li>
+                    <li><span>15</span></li>
+                    <li><span>0</span></li>
+                </ul>
+
+            </div>
+
+            <div id="main-part">
+                
+                <div class="main-row">
+
+                    <div class="inputs">
+                        <ul>
+                            <li>
+                                <label><input type="radio" name="Conversion" value="hex"> Hex</label>
+                            </li>
+                            <li>
+                                <label><input type="radio" name="Conversion" value="dec" checked> Dec</label>
+                            </li>
+                            <li>
+                                <label><input type="radio" name="Conversion" value="oct"> Oct</label>
+                            </li>
+                            <li>
+                                <label><input type="radio" name="Conversion" value="bin"> Bin</label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="row">
+                        
+                        <div class="sub-row">
+                            <button class="btn btn-spec">&nbsp;</button>
+                            <button class="btn btn-func">Mod</button>
+                            <button class="btn" disabled>A</button>
+                            <button class="btn btn-spec">MC</button>
+                            <button class="btn btn-spec">MR</button>
+                            <button class="btn btn-spec">MS</button>
+                            <button class="btn btn-spec">M+</button>
+                            <button class="btn btn-spec">M-</button>
+                        </div>
+
+                        <div class="sub-row">
+                            <button class="btn btn-func">(</button>
+                            <button class="btn btn-func">)</button>
+                            <button class="btn" disabled>B</button>
+                            <button class="btn btn-func bold">&larr;</button>
+                            <button class="btn btn-func">CE</button>
+                            <button class="btn btn-func">C</button>
+                            <button class="btn btn-func">&plusmn;</button>
+                            <button class="btn" disabled>&radic;</button>
+                        </div>
+
+                        <div>
+                            <button class="btn btn-func">Rol</button>
+                            <button class="btn btn-func">RoR</button>
+                            <button class="btn" disabled>C</button>
+                            <button class="btn btn-num">7</button>
+                            <button class="btn btn-num">8</button>
+                            <button class="btn btn-num">9</button>
+                            <button class="btn btn-func">/</button>
+                            <button class="btn" disabled>%</button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="main-row">
+
+                    <div class="inputs">
+                        <ul>
+                            <li>
+                                <label><input type="radio" name="Architecture" value="qword" checked> Qword</label>
+                            </li>    
+                            <li>
+                                <label><input type="radio" name="Architecture" value="dword"> Dword</label>
+                            </li>
+                            <li>
+                                <label><input type="radio" name="Architecture" value="word"> Word</label>
+                            </li>
+                            <li>
+                                <label><input type="radio" name="Architecture" value="byte"> Byte</label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="sub-row">
+                            <button class="btn btn-func">Or</button>
+                            <button class="btn btn-func">Xor</button>
+                            <button class="btn" disabled>D</button>
+                            <button class="btn btn-num">4</button>
+                            <button class="btn btn-num">5</button>
+                            <button class="btn btn-num">6</button>
+                            <button class="btn btn-func">*</button>
+                            <button class="btn" disabled>1/<span class="emph">x</span></button>
+                        </div>
+
+                        <div class="sub-row">
+                            <button class="btn btn-func">Lsh</button>
+                            <button class="btn btn-func">Rsh</button>
+                            <button class="btn" disabled>E</button>
+                            <button class="btn btn-num">1</button>
+                            <button class="btn btn-num">2</button>
+                            <button class="btn btn-num">3</button>
+                            <button class="btn btn-func">-</button>
+                            <button class="btn btn-func btn-high bold">=</button>
+                        </div>
+
+                        <div>
+                            <button class="btn btn-func">Not</button>
+                            <button class="btn btn-func">And</button>
+                            <button class="btn" disabled>F</button>
+                            <button class="btn btn-long btn-num">0</button>
+                            <button class="btn bold" disabled>.</button>
+                            <button class="btn btn-func">+</button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+    </body>
+</html>

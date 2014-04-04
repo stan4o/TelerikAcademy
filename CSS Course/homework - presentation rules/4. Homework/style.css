@@ -1,0 +1,215 @@
+html, body, section, div, ul, li, span, input, label, button
+{
+	margin:0;
+	padding:0;
+	border:none;
+	font-size:100%;
+}
+
+section {
+	display: block;
+}
+
+ul {
+	list-style-type: none;
+}
+
+input:focus, button:focus {
+	outline: none;
+}
+
+body {
+	color: #2f4155;
+	font-size: 13px;
+	font-family: Consolas, monospace;
+	
+}
+
+.main-row:after, .binary-data:after {
+	content: "";
+	display:block;
+	clear: both;
+	zoom:1;
+	height:0;
+}
+
+.box, .btn, .inputs {
+	border: 1px solid #777;
+	border-radius: 3px;
+	-o-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+#calculator {
+	width: 390px;
+	margin: 50px auto;
+	padding: 5px;
+	border: 1px solid #555;
+	background: -webkit-linear-gradient(#F0F0F0 0%, #D9E4F1 100%);
+	background: -moz-linear-gradient(#F0F0F0 0%, #D9E4F1 100%);
+	background: -o-linear-gradient(#F0F0F0 0%, #D9E4F1 100%);
+	background: linear-gradient(#F0F0F0 0%, #D9E4F1 100%);
+}
+
+.calc-menu {
+	margin: -5px -5px 10px;
+	padding-left: 5px;
+	border-bottom: 1px solid #B6BCCC;
+	background: -webkit-linear-gradient(#FEFEFF 0%, #E5EAF5 34%, #D4DBED 35%, #E1E6F6 100%);
+	background: -moz-linear-gradient(#FEFEFF 0%, #E5EAF5 34%, #D4DBED 35%, #E1E6F6 100%);
+	background: -o-linear-gradient(#FEFEFF 0%, #E5EAF5 34%, #D4DBED 35%, #E1E6F6 100%);
+	background: linear-gradient(#FEFEFF 0%, #E5EAF5 34%, #D4DBED 35%, #E1E6F6 100%);
+}
+
+.calc-menu li {
+	display: inline-block;
+	margin-right: 5px;
+	font-size: 0.8em;
+	font-weight: bold;
+}
+
+.calc-menu li:first-letter {
+	text-decoration: underline;
+}
+
+#calc-input-field {
+	padding: 15px 10px 5px;
+	margin-bottom: 5px;
+	background: -webkit-linear-gradient(#E6EFFB, #FFFFFF);
+	background: -moz-linear-gradient(#E6EFFB, #FFFFFF);
+	background: -o-linear-gradient(#E6EFFB, #FFFFFF);
+	background: linear-gradient(#E6EFFB, #FFFFFF);
+	
+}
+
+#calc-input-field input {
+	width: 100%;
+	height: 30px;
+	font-size: 1.8em;
+	text-align: right;
+	background: none;
+}
+
+.binary-data {
+	padding: 5px 5px 5px 7px;
+}
+
+.data-row li, .span-row li {
+    display: block;
+	float: left;
+}
+
+.data-row li {
+	width: 33px;
+}
+
+.data-row li + li {
+	margin-left: 16px;
+}
+
+.data-row li:last-child {
+	position:relative;
+	left: 2px;
+}
+
+.span-row li {
+	display: block;
+	float: left;
+	color: #888;
+}
+
+.span-row li:first-child {
+	width: 196px;
+}
+
+.span-row li:last-child {
+	width: 164px;
+	text-align: right;
+}
+
+.main-row {
+	padding-top: 5px;
+}
+
+.inputs {
+	width: 64px;
+	padding: 6px;
+}
+
+.inputs ul li {
+	padding: 1px 0;
+}
+
+.inputs, .row {
+	float: left;
+}
+
+.sub-row, .sub-row>.btn {
+	margin-bottom: 5px;
+}
+
+.btn {
+	float: left;
+	width: 34px;
+	height: 26px;
+	margin-left: 5px;
+	border: 1px solid #8797AA;
+	color: #2f4155;
+}
+
+.btn-high {
+	height: 58px;
+	float: right;
+	margin: 0 !important;
+}
+
+.btn-long {
+	width: 72px;
+}
+
+.btn:hover, .btn:focus {
+	border-color: #F5D50F;
+	background: -webkit-linear-gradient(#FEF5EB 0%, #FCE3C6 49%, #FBD075 50%, #FCF8CA 100%);
+	background: -moz-linear-gradient(#FEF5EB 0%, #FCE3C6 49%, #FBD075 50%, #FCF8CA 100%);
+	background: -o-linear-gradient(#FEF5EB 0%, #FCE3C6 49%, #FBD075 50%, #FCF8CA 100%);
+	background: linear-gradient(#FEF5EB 0%, #FCE3C6 49%, #FBD075 50%, #FCF8CA 100%);
+}
+
+.btn-func {
+	background: -webkit-linear-gradient(#F0F6FB 0%, #E2EAF3 49%, #D5E0ED 50%, #D7E2EF 100%);
+	background: -moz-linear-gradient(#F0F6FB 0%, #E2EAF3 49%, #D5E0ED 50%, #D7E2EF 100%);
+	background: -o-linear-gradient(#F0F6FB 0%, #E2EAF3 49%, #D5E0ED 50%, #D7E2EF 100%);
+	background: linear-gradient(#F0F6FB 0%, #E2EAF3 49%, #D5E0ED 50%, #D7E2EF 100%);
+}
+
+.btn-num {
+	font-size: 1.2em;
+	background: -webkit-linear-gradient(#F7FBFF 0%, #EDF3F8 49%, #E7EDF5 50%, #F3FBFF 100%);
+	background: -moz-linear-gradient(#F7FBFF 0%, #EDF3F8 49%, #E7EDF5 50%, #F3FBFF 100%);
+	background: -o-linear-gradient(#F7FBFF 0%, #EDF3F8 49%, #E7EDF5 50%, #F3FBFF 100%);
+	background: linear-gradient(#F7FBFF 0%, #EDF3F8 49%, #E7EDF5 50%, #F3FBFF 100%);
+}
+
+.btn-spec {
+	background: #D9E4F1;
+}
+
+.btn[disabled], .btn[disabled]:link, .btn[disabled]:active, .btn[disabled]:visited, .btn[disabled]:hover, .btn[disabled]:focus {
+	background: #ddd;
+	border-color: #999;
+	color: gray;
+}
+
+.btn:not(:hover):not(:disabled):not(:focus):not(.btn-num),
+#calc-input-field, .binary-data { 
+	box-shadow: inset 0 0 0 1px #fff;
+}
+
+.emph {
+	font-style: italic;
+}
+
+.bold {
+	font-size: 1.4em;
+}

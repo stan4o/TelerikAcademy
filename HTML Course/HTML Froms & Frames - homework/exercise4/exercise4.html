@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Exercise 4</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<h1>Create the following HTML page</h1>
+	</header>
+	<section>
+		<table id="mainTable"><!--Main Table-->
+			<thead>
+				<tr>
+					<th colspan="2">
+						<a href="#">Apple</a>
+						<a href="#">Toshiba</a>
+						<a href="#">Lenovo</a>
+						<a href="#">Dell</a>
+						<a href="#">Asus</a>
+						<a href="#">Acer</a>
+						<a href="#">HP</a>
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><!--Laptop Grid-->
+						<table><!--Data Table-->
+							<tbody>
+								<tr><!--First Row-->
+									<td><!--First Cell-->
+										<fieldset>
+											<legend>Apple Mackbook Air</legend>
+											<img src="apple.png" alt="Apple Mackbook Air" width="100" height="64">64GB SSD<br>2GB DDR<br>1300USD<br>Intel Core i5
+										</fieldset>
+									</td>
+									<td><!--Second Cell-->
+										<fieldset>
+											<legend>Apple Mackbook Air</legend>
+											<img src="apple.png" alt="Apple Mackbook Air" width="100" height="64">64GB SSD<br>2GB DDR<br>1300USD<br>Intel Core i5
+										</fieldset>
+									</td>
+								</tr>
+								<tr><!--First Row-->
+									<td><!--First Cell-->
+										<fieldset>
+											<legend>Apple Mackbook Air</legend>
+											<img src="apple.png" alt="Apple Mackbook Air" width="100" height="64">64GB SSD<br>2GB DDR<br>1300USD<br>Intel Core i5
+										</fieldset>
+									</td>
+									<td><!--Second Cell-->
+										<fieldset>
+											<legend>Apple Mackbook Air</legend>
+											<img src="apple.png" alt="Apple Mackbook Air" width="100" height="64">64GB SSD<br>2GB DDR<br>1300USD<br>Intel Core i5
+										</fieldset>
+									</td>
+								</tr>
+								<tr><!--First Row-->
+									<td><!--First Cell-->
+										<fieldset>
+											<legend>Apple Mackbook Air</legend>
+											<img src="apple.png" alt="Apple Mackbook Air" width="100" height="64">64GB SSD<br>2GB DDR<br>1300USD<br>Intel Core i5
+										</fieldset>
+									</td>
+									<td><!--Second Cell-->
+										<fieldset>
+											<legend>Apple Mackbook Air</legend>
+											<img src="apple.png" alt="Apple Mackbook Air" width="100" height="64">64GB SSD<br>2GB DDR<br>1300USD<br>Intel Core i5
+										</fieldset>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+					<td id="filters"><!--Filters-->
+						<div>
+							<label for="minPrice">Min price:&nbsp;500USD</label><br>
+							<input type="range" id="minPrice" value="500" min="0" max="1000" step="100">
+						</div>
+						<div>
+							<label for="minPrice">Max price:&nbsp;1500USD</label><br>
+							<input type="range" id="maxPrice" value="1500" min="0" max="3000" step="500">
+						</div>
+						<div>
+							<label for="minPrice">Min RAM:&nbsp;&nbsp;&nbsp;4GB</label><br>
+							<input type="range" id="minRam" value="4" min="0" max="8" step="1">
+						</div>
+						<div>
+							<label for="minPrice">Max RAM:&nbsp;&nbsp;&nbsp;16GB</label><br>
+							<input type="range" id="maxRam" value="16" min="0" max="32" step="4">
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+</body>
+</html>

@@ -1,0 +1,45 @@
+/* Css Reset */
+html, body, div, h1, ul, li, span, button, label, img {
+  margin: 0;
+  padding: 0;
+  border: 0; }
+
+/* Main Style */
+body {
+  background: #000; }
+  body div#wrapper {
+    width: 930px;
+    height: 685px;
+    margin: 0 auto;
+    padding: 50px;
+    font-family: Arial; }
+    body div#wrapper h1 {
+      color: #eee;
+      margin-bottom: 10px; }
+      body div#wrapper h1 span {
+        color: #c2be29; }
+    body div#wrapper ul {
+      list-style-type: none; }
+      body div#wrapper ul li {
+        float: left;
+        margin-right: 5px; }
+        body div#wrapper ul li input[type="radio"] {
+          display: none; }
+        body div#wrapper ul li img {
+          display: none; }
+        body div#wrapper ul li label img {
+          display: block;
+          width: 150px;
+          height: 120px;
+          border-radius: 3px;
+          cursor: pointer;
+          opacity: 0.6;
+          transition: opacity 0.3s ease-in-out; }
+          body div#wrapper ul li label img:hover {
+            opacity: 1; }
+        body div#wrapper ul li input[type="radio"]:checked + img {
+          display: block;
+          position: absolute;
+          top: 185px;
+          left: 400px;
+          margin-top: 70px; }
