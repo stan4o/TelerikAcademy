@@ -1,0 +1,47 @@
+html, body, div, ul, li, span {
+	margin:0;
+	padding:0;
+	font-size:100%;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+div#wrapper {
+	width: 300px;
+	margin: 50px auto;
+}
+
+ul {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+	color: #444;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: blue;
+}
+
+ul>li {
+	padding: 3px;
+}
+
+ul li>ul {
+	display: none;
+}
+
+ul li:hover>ul{
+	display: block;
+	padding-left: 10px;
+}
+
+ul li ul a {
+	color: #888;
+}

@@ -1,0 +1,90 @@
+html, body, div, p, a, img, span, label, input {
+	margin: 0;
+	padding: 0;
+	border: none;
+	font-size: 100%;
+	font: inherit;
+}
+
+body {
+	font-family: "Trebuchet Ms", Helvetica, sans-serif;
+	font-size: 15px;
+	line-height: 1;
+}
+
+#wrapper {
+	width: 670px;
+	padding: 20px;
+}
+
+#links {
+	margin: 10px;
+	padding: 10px 20px;
+	border-bottom: 1px solid #000;
+}
+
+#links span a {
+	color: #3BB9FF;
+	font-size: 1.3em;
+	font-weight: bold;
+}
+
+#laptops, .cell {
+	border: 1px solid #000;
+}
+
+#laptops, #range-btn {
+	float: left;
+	padding: 10px;
+	padding-bottom: 0;
+}
+
+.row .cell {
+	float: left;
+	margin: 0 10px 10px 0;
+	padding: 5px 15px;
+}
+
+#laptops:after, #range-btn:after, .cell:after {
+	content: "";
+	display: block;
+	clear: both;
+	height: 0;
+}
+
+.row .cell:last-of-type {
+	margin: 0;
+}
+
+.cell > p {
+	position: relative;
+	top: -14px;
+	background: #fff;
+	text-align: center;
+}
+
+.image, .info-part1 {
+	float: left;
+}
+
+.image {
+	margin: 0 5px 5px 0;
+}
+
+.info-part1 p {
+	margin-top: 13px;
+}
+
+.info-part2 span {
+	margin-left: 20px;
+}
+
+#range-btn {
+	margin: 30px 0 0 10px;
+	font-size: 1.2em;
+}
+
+#range-btn input[type="range"] {
+	margin: 20px 10px;
+	width: 130px;
+}

@@ -1,0 +1,99 @@
+html, body, header, section, article, div, h1, img, p, strong, a, button {
+	margin:0;
+	padding:0;
+	border:none;
+	font-size: 100%;
+	line-height:1;
+}
+
+header, section, article {
+	display: block;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+button {
+	outline: none;
+}
+
+#wrapper {
+	width: 400px;
+	padding: 15px 10px;
+	background-color: #eee;
+	border-radius: 10px;
+	-o-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+
+	header h1 {
+		font-size: 1.3em;
+		font-weight: normal;
+	}
+	
+	section article {
+		margin-top: 30px;
+		padding: 15px;
+		background-color: #fff;
+		border: 1px solid #aaa;
+	}
+	
+	section article:after {
+		content: "";
+		display:block;
+		clear:both;
+		height:0;
+	}
+	
+		.img-wrp, info-wrp {
+			float: left;
+		}
+		
+		.img-wrp {
+			margin-right: 15px;
+		}
+			img {
+				border: 1px solid #aaa;
+			}
+			
+			p {
+				height: 60px;
+			}
+
+			.btn-wrp {
+				position: relative;
+				top: 3px;
+				left: 83px;
+			}
+
+				button {
+					transition: color 0.3s;
+				}
+			
+				button.listen {
+					width: 73px;
+					height:25px;
+					background: #f00 url('images/listen-btn.png') no-repeat;
+					color: #fff;
+					text-indent: 15px;
+				}
+				
+				button.add {
+					width: 60px;
+					height:25px;
+					background: #f00 url('images/add-btn.png') no-repeat;
+					color: #fff;
+					text-indent: 15px;
+				}
+
+				button.add:hover, button.listen:hover {
+					color: #666;
+				}
