@@ -1,0 +1,96 @@
+html, body, header, nav, article, aside, div, h1, h2, ul, li, p, form, input, hr {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style-type: none;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+
+}
+
+#wrapper {
+	width: 960px;
+	margin: 0 auto;
+}
+
+.clear {
+	clear: both;
+}
+
+header {
+	padding: 20px;
+	height: 57px;
+	background: url("images/header-bg.png");
+}
+
+header h1 {
+	font-size: 34px;
+	color: #EEFFEE;
+}
+
+header h2 {
+	font-size: 1em;
+	color: #98B7C0;
+	font-weight: normal;
+}
+
+header #nav {
+	float: right;
+}
+
+header #nav ul {
+	position: relative;
+	margin-right: 10px;
+	bottom: 35px;
+	list-style-type: none;
+}
+
+header #nav ul li {
+	display: block;
+	float: left;
+	margin-left: 20px;
+	font-size: 18px;
+	font-weight: bold;
+	color: #c60;
+}
+
+#line {
+	height: 5px;
+	background: #39C518;
+}
+
+#content {
+	float: left;
+	width: 760px;
+	margin-top: 20px;
+}
+
+#content h1 {
+	margin-bottom: 20px;
+	font-size: 30px;
+	color: #59770E;
+}
+
+#content article p {
+	color: #555;
+	margin-bottom: 15px;
+}
+
+#aside {
+	margin-top: 20px;
+	width: 200px;
+	float: right;
+	font-size: 1em;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #59770E;
+}
+
+#aside hr {
+	margin: 10px 0;
+}
