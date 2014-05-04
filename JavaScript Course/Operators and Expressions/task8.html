@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Data Types and Variables</title>
+	<link rel="stylesheet" href="js-console.min.css">
+</head>
+<body>
+	<label for="aSide">A-side:<input type="text" id="aSide"></label>
+	<label for="bSide">B-side:<input type="text" id="bSide"></label>
+	<label for="height">Height:<input type="text" id="height"></label>
+	<input type="submit" value="Check" onclick="task8();">
+	<div id="js-console"></div>
+	<script src="js-console.js"></script>
+	<script>
+		jsConsole.writeLine('Calculate trapezoid\'s area');
+		function task8() {
+			var aSide = parseInt(document.getElementById('aSide').value);
+			var bSide = parseInt(document.getElementById('bSide').value);
+			var height = parseInt(document.getElementById('height').value);
+			var area = ((aSide + bSide) * height) / 2;
+
+			jsConsole.writeLine('The rectangle’s area is: ' + area);
+		};
+	</script>
+</body>
+</html>

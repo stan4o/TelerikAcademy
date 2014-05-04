@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Data Types and Variables</title>
+	<link rel="stylesheet" href="js-console.min.css">
+</head>
+<body>
+	<input type="text" id="inputField">
+	<input type="submit" value="Check" onclick="task2();">
+	<div id="js-console"></div>
+	<script src="js-console.js"></script>
+	<script>
+		jsConsole.writeLine('Check if the value entered can be divided by 7 and 5 at the same time without remainder!<br>');
+		function task2() {
+			var inputField = parseInt(document.getElementById('inputField').value);
+
+			if (((inputField % 5) == 0) && ((inputField % 7) == 0)) {
+				jsConsole.writeLine('True!');
+			} else {
+				jsConsole.writeLine('False!');
+			};
+		};
+	</script>
+</body>
+</html>

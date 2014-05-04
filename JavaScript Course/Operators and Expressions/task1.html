@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Data Types and Variables</title>
+	<link rel="stylesheet" href="js-console.min.css">
+</head>
+<body>
+	<input type="text" id="inputField">
+	<input type="submit" value="Check" onclick="task1();">
+	<div id="js-console"></div>
+	<script src="js-console.js"></script>
+	<script>
+		jsConsole.writeLine('Check if the value entered is odd or even!<br>');
+		function task1() {
+			var inputField = parseInt(document.getElementById('inputField').value);
+
+			if ((inputField % 2) == 1) {
+				jsConsole.writeLine('The number ' + inputField + ' is odd.');
+			}else {
+				jsConsole.writeLine('The number ' + inputField + ' is even.');
+			}
+		};
+	</script>
+</body>
+</html>

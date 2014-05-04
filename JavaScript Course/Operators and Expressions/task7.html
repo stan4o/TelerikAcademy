@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Data Types and Variables</title>
+	<link rel="stylesheet" href="js-console.min.css">
+</head>
+<body>
+	<input type="text" id="inputField">
+	<input type="submit" value="Check" onclick="task7();">
+	<div id="js-console"></div>
+	<script src="js-console.js"></script>
+	<script>
+		jsConsole.writeLine('Check if the number entered is prime!<br>');
+		function task7() {
+			var inputField = parseInt(document.getElementById('inputField').value);
+			var max = 100;
+
+			// Check if the value is negative
+			if (inputField < 0) {
+				jsConsole.writeLine('Please provide a positive number!');
+
+			// Check if the value is between 2 and max number (1 is NOT a prime number)
+			} else if ((1 < inputField) && (inputField <= max)) {
+				if (isPrime(inputField)) {
+					jsConsole.writeLine('Prime number!');
+				} else {
+					jsConsole.writeLine('NOT a prime number!');
+				}
+			}else {
+				jsConsole.writeLine('Please provide a number between 2 and 100!');
+			};
+		};
+
+
+		// Using the Sieve of Eratosthenes
+		function isPrime(number) {
+			for (var i = 2; i < number; i++) {
+				if ((number % i) == 0) {
+					return false;
+				};
+			};
+			return true;
+		};
+	</script>
+</body>
+</html>

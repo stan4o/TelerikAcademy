@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Data Types and Variables</title>
+	<link rel="stylesheet" href="js-console.min.css">
+</head>
+<body>
+	<label for="width">Width:<input type="text" id="width"></label>
+	<label for="height">Height:<input type="text" id="height"></label>
+	<input type="submit" value="Check" onclick="task3();">
+	<div id="js-console"></div>
+	<script src="js-console.js"></script>
+	<script>
+		jsConsole.writeLine('Calculate rectangle\'s area<br>');
+		function task3() {
+			var width = parseInt(document.getElementById('width').value);
+			var height = parseInt(document.getElementById('height').value);
+
+			jsConsole.writeLine('The rectangle’s area is: ' + (width * height));
+		};
+	</script>
+</body>
+</html>
