@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Conditional Statements</title>
+	<link rel="stylesheet" href="js-console.min.css">
+</head>
+<body>
+	<label for="first"><strong>First number:</strong><input type="text" id="first"></label>
+	<label for="second"><strong>Second number:</strong><input type="text" id="second"></label>
+	<label for="third"><strong>Third number:</strong><input type="text" id="third"></label>
+	<input type="submit" value="Check" onclick="task3();">
+	<div id="js-console"></div>
+	<script src="js-console.js"></script>
+	<script>
+		jsConsole.writeLine('Write a script that finds the biggest of three integers using nested if statements.<br>');
+
+		function task3() {
+			var first = parseFloat(document.getElementById('first').value);
+			var second = parseFloat(document.getElementById('second').value);
+			var third = parseFloat(document.getElementById('third').value);
+			var biggest;
+
+			if (first > second) {
+				biggest = first;
+				if (first < third) {
+					biggest = third;
+				};
+			} else {
+				biggest = second;
+				if (second < third) {
+					biggest = third;
+				};
+			};
+
+			jsConsole.writeLine('The biggest number of three is: ' + biggest);
+		};
+	</script>
+</body>
+</html>

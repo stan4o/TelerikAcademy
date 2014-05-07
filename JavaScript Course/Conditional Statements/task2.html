@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Conditional Statements</title>
+	<link rel="stylesheet" href="js-console.min.css">
+</head>
+<body>
+	<label for="first">First number<input type="text" id="first"></label>
+	<label for="second">Second number<input type="text" id="second"></label>
+	<label for="third">Third number<input type="text" id="third"></label>
+	<input type="submit" value="Check" onclick="task2();">
+	<div id="js-console"></div>
+	<script src="js-console.js"></script>
+	<script>
+		jsConsole.writeLine('Write a script that shows the sign (+ or -) of the product of three real numbers without calculating it. Use a sequence of if statements<br>');
+
+		function task2() {
+			var first = parseFloat(document.getElementById('first').value);
+			var second = parseFloat(document.getElementById('second').value);
+			var third = parseFloat(document.getElementById('third').value);
+			var negativeNum = 0;
+			var sign = '+';
+
+			if (first < 0) {
+				negativeNum++;
+			}
+			if (second < 0) {
+				negativeNum++;
+			}
+			if (third < 0) {
+				negativeNum++;
+			};
+
+			if (!(negativeNum % 2 == 0)) {
+				var sign = '-';
+			};
+
+			jsConsole.writeLine('The sign of the product of these three numbers is ' + "'" + sign + "'");
+		};
+	</script>
+</body>
+</html>

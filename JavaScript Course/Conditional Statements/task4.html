@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Conditional Statements</title>
+	<link rel="stylesheet" href="js-console.min.css">
+</head>
+<body>
+	<label for="first">First number<input type="text" id="first"></label>
+	<label for="second">Second number<input type="text" id="second"></label>
+	<label for="third">Third number<input type="text" id="third"></label>
+	<input type="submit" value="Check" onclick="task3();">
+	<div id="js-console"></div>
+	<script src="js-console.js"></script>
+	<script>
+		jsConsole.writeLine('Sort 3 real values in descending order using nested if statements.<br>');
+
+		function task3() {
+			var first = parseFloat(document.getElementById('first').value);
+			var second = parseFloat(document.getElementById('second').value);
+			var third = parseFloat(document.getElementById('third').value);
+			var order;
+
+			if ((first > second) && (first > third)) {
+				order = first + ' ';
+				if (second >= third) {
+					order += second + ' ' + third;
+				} else {
+					order += third + ' ' + second;
+				};
+			};
+
+			if ((second > first) && (second > third)) {
+				order = second + ' ';
+				if (first >= third) {
+					order += first + ' ' + third;
+				} else {
+					order += third + ' ' + first;
+				};
+			};
+
+			if ((third > second) && (third > first)) {
+				order = third + ' ';
+				if (first >= second) {
+					order += first + ' ' + second;
+				} else {
+					order += second + ' ' + first;
+				};
+			};
+
+			if ((first == second) && (first == third)) {
+				order = first + ' ' + second + ' ' + third;
+			};
+
+			jsConsole.writeLine('The descending order of the numbers is: ' + order);
+		};
+	</script>
+</body>
+</html>
