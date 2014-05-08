@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Loops</title>
+	<link rel="stylesheet" href="js-console.min.css">
+</head>
+<body>
+	<label for="input-tb">Type a sequence of numbers:<input type="text" id="input-tb" placeholder="separated by space"></label>
+	<button onclick="onClick();">Click Me!</button>
+	<div id="js-console"></div>
+	<script src="js-console.js"></script>
+	<script>
+		jsConsole.writeLine('Write a script that finds the max and min number from a sequence of numbers.<br>');
+
+		function onClick() {
+			var input = document.getElementById('input-tb').value;
+			input = input.trim(); // trim for unwanted spaces before and after the sequence
+			var arr = input.split(' ');
+			arr = arr.sort(function(a, b) {
+				return a - b;
+			}); // sorting the numbers ASC
+
+			// Check for valid sequence
+			if (isNaN(parseFloat(arr[0])) || isNaN(parseFloat(arr[arr.length - 1])) || input === "") {
+				jsConsole.writeLine('Please insert a valid sequence of numbers separated by a space -> " "');
+			} else {
+				jsConsole.writeLine('Max value is: ' + arr[arr.length - 1]);
+				jsConsole.writeLine('Min value is: ' + arr[0]);
+			};
+		};
+	</script>
+</body>
+</html>

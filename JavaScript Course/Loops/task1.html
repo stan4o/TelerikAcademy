@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Loops</title>
+	<link rel="stylesheet" href="js-console.min.css">
+</head>
+<body>
+	<label for="input-tb">Insert here:<input type="text" id="input-tb"></label>
+	<button onclick="onClick();">Click Me!</button>
+	<div id="js-console"></div>
+	<script src="js-console.js"></script>
+	<script>
+		jsConsole.writeLine('Write a script that prints all the numbers from 1 to N<br>');
+
+		function onClick () {
+			var n = jsConsole.readInteger('#input-tb');
+			var numbers = '';
+
+			for (var i = 1; i <= n; i++) {
+				numbers += i + ' ';
+			};
+
+			jsConsole.writeLine('These are the numbers from 1 to ' + n + ':<br>' + numbers);
+		}
+	</script>
+</body>
+</html>
