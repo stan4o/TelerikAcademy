@@ -29,34 +29,35 @@
 				jsConsole.writeLine('Please insert valid values for the array and searched number!');
 			}
 
-			function binarySearch(arr, elm, start, end) {
-				// Create default values
-				var arr = arr || [];
-				var elm = parseFloat(elm) || '';
-				var start = start || 0;
-				var end = end || arr.length - 1;
+		};
 
-				// Check if it's array
-				if (start > end) {
-					return 'Key Not Found';
-				} else {
-					// calculate the middle index
-					var mid = parseInt((start + end) / 2);
+		function binarySearch(arr, elm, start, end) {
+			// Create default values
+			var arr = arr || [];
+			var elm = parseFloat(elm) || '';
+			var start = start || 0;
+			var end = end || arr.length - 1;
 
-					// Key is in lower set
-					if (arr[mid] > elm) 
-						return binarySearch(arr, elm, start, mid-1);
+			// Check if it's array
+			if (start > end) {
+				return 'Key Not Found';
+			} else {
+				// calculate the middle index
+				var mid = parseInt((start + end) / 2);
 
-					// Key is in upper set
-					else if (arr[mid] < elm) 
-						return binarySearch(arr, elm, mid+1, end);
+				// Key is in lower set
+				if (arr[mid] > elm) 
+					return binarySearch(arr, elm, start, mid-1);
 
-					// Key has been found
-					else 
-						return mid;
-				}
+				// Key is in upper set
+				else if (arr[mid] < elm) 
+					return binarySearch(arr, elm, mid+1, end);
 
+				// Key has been found
+				else 
+					return mid;
 			}
+
 		};
 	</script>
 </body>
