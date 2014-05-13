@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Functions</title>
+	<link rel="stylesheet" href="js-console.min.css">
+</head>
+<body>
+	<label for="input-tb">Insert a digit:<input type="text" id="input-tb"></label>
+	<button id="button">Click</button>
+	<div id="js-console"></div>
+	<script src="js-console.js"></script>
+	<script>
+		jsConsole.writeLine('Write a function that returns the last digit of given integer as an English word.<br>');
+
+		 // Assign onclick function
+		document.getElementById('button').onclick = function() {
+			var inp = document.getElementById('input-tb').value; // get the integer
+			var d, n;
+
+			function getName (inp) {
+				n = inp % 10;
+				switch (n) {
+					case 0:
+						d = 'Zero';
+						break;
+					case 1:
+						d = 'One';
+						break;
+					case 2:
+						d = 'Two';
+						break;
+					case 3:
+						d = 'Three';
+						break;
+					case 4:
+						d = 'Four';
+						break;
+					case 5:
+						d = 'Five';
+						break;
+					case 6:
+						d = 'Six';
+						break;
+					case 7:
+						d = 'Seven';
+						break;
+					case 8:
+						d = 'Eight';
+						break;
+					case 9:
+						d = 'Nine';
+						break;
+					default:
+						jsConsole.writeLine('Please enter a valid digit!');
+						break;
+				}
+
+				return d;
+			}
+
+			jsConsole.writeLine(inp + ' -> ' + getName(inp));
+		};
+	</script>
+</body>
+</html>

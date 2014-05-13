@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Functions</title>
+	<link rel="stylesheet" href="js-console.min.css">
+	<style>
+		div:not(#js-console) {
+			display: inline-block;
+			width: 50px;
+			height: 50px;
+			margin: 10px;
+			background-color: #000;
+		}
+	</style>
+</head>
+<body>
+	<button onclick="createDiv();">Create DIV</button>
+	<button id="button">Calculate DIV'S</button>
+	<div id="js-console"></div>
+	<script src="js-console.js"></script>
+	<script>
+		jsConsole.writeLine('Write a function to count the number of divs on the web page.<br>');
+
+		 // Assign onclick function
+		document.getElementById('button').onclick = function() {
+			var divs = document.getElementsByClassName('test');
+			var count = divs.length;
+
+			return jsConsole.writeLine('There are ' + count + ' divs in the document.');
+		}
+
+		function createDiv () {
+			var elm = document.createElement('div');
+			elm.className = 'test';
+			document.body.appendChild(elm);
+		}
+
+	</script>
+</body>
+</html>
